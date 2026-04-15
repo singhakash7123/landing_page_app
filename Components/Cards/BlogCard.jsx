@@ -1,0 +1,35 @@
+import React from "react";
+import Link from "next/link";
+const BlogCard = () => {
+  return (
+    <article className="flex items-center justify-center gap-x-12">
+      <div className="w-full max-w-xl lg:max-w-sm aspect-3/4 bg-red-500 rounded-2xl"></div>
+      <div className="w-full py-5">
+        <div className="flex items-center gap-x-8 mb-3">
+          <div>By Syful Khan</div>
+          <div className='before:content-["Jun_25,_2025"]'></div>
+          <div className='before:content-["0_Comments"]'></div>
+        </div>
+        <h3 className="text-4xl font-semibold">
+          Enhancing User Experience with Custom Web Designs
+        </h3>
+        <p className="mt-5 ">
+          Discover how custom web design can set your brand apart and create a
+          more engaging user experience. This blog covers the benefits of
+          personalized designs, from improving navigation to reinforcing brand
+          identity.
+        </p>
+        <div className="mt-6">
+          <Link
+            className="py-2 px-5 rounded-2xl font-bold text-white bg-[#936dff]"
+            href={"/Blog/BlogDetails"}
+          >
+            Read more
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+export default BlogCard;
