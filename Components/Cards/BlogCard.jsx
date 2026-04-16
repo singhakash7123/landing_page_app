@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 const BlogCard = () => {
   return (
-    <article className="flex items-center justify-center gap-x-12">
-      <div className="w-full max-w-xl lg:max-w-sm aspect-3/4 bg-red-500 rounded-2xl"></div>
+    <article className="flex flex-col lg:flex-row items-center justify-center gap-x-12">
+      <div className="w-full lg:max-w-sm aspect-square md:aspect-5/3 lg:aspect-3/4 bg-red-500 rounded-2xl"></div>
       <div className="w-full py-5">
         <div className="flex items-center gap-x-8 mb-3">
           <div>By Syful Khan</div>

@@ -11,7 +11,7 @@ const page = () => {
         <p className='max-w-xl mx-auto mt-4 text-gray-400'>Stay informed with our latest articles and updates, covering
 trends, tips, and insights to help you grow.</p>
     </div>
-    <div className='w-full max-w-7xl mx-auto grid grid-cols-[7fr_3fr] gap-x-10 '>
+    <div className='w-full sm:max-w-3xl lg:max-w-7xl mx-auto grid lg:grid-cols-[7fr_3fr] grid-cols-1 gap-x-10 px-6'>
        <ul className='space-y-8'>
         <li><BlogCard/></li>
         <li><BlogCard/></li>

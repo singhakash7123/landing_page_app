@@ -6,7 +6,7 @@ const page = () => {
     <>
     <div className='h-20 bg-black lg:h-25'>page</div>
    
-    <div className='w-full max-w-7xl mx-auto grid grid-cols-[7fr_3fr] gap-x-10 mt-8'>
+    <div className='w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-x-10 mt-8 px-6'>
         <div>
         <div className='flex items-center gap-x-5  text-gray-500'>
             <span>By Shariful UK</span>
@@ -14,7 +14,7 @@ const page = () => {
             <span>0 Comments</span>
         </div>
         <h1 className='text-5xl font-bold mt-6'>The Importance of SEO in Growing Your Online Store</h1>
-        <div className='w-full aspect-2/1 bg-red-400 mt-10 rounded-xl'></div>
+        <div className='w-full md:max-w-3xl aspect-square md:aspect-2/1 bg-red-400 mt-10 rounded-xl'></div>
 
         <div className='flex gap-x-3 mt-8'>
             <span className='text-5xl font-bold'>A</span>
