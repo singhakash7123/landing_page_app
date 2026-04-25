@@ -1,47 +1,32 @@
 'use client'
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { GrMenu } from "react-icons/gr";
 import { RxCross1 } from "react-icons/rx";
+import { CiMenuFries } from "react-icons/ci";
 const MobileMenu = () => {
-
- 
-
-  const[isOpen,setIsOpen] = useState(false) ;
-  const[openPages,setOpenPages] = useState(false) ;
-  const handleMenu = ()=>{
-    setOpenPages(false)
-    setIsOpen(false)
-  }
-
- 
-
+  const[isMenuOpen,setIsMenuOpen] = useState(false)
+  const[showPages, setShowPages] = useState(false) ;
   return (
-    <aside className='flex lg:hidden'>
-      
-        
-         <ul className={`w-full min-h-screen bg-white  flex lg:hidden flex-col items-start  gap-y-6 text-2sm absolute top-full right-0 transform transition-all ease-in-out duration-500 overflow-y-auto p-6 ${isOpen?' translate-x-0':'translate-x-full'}`}>
-            <li><Link onClick={handleMenu} className='text-lg  w-full ' href={'/'}>Home</Link></li>
-            <li><Link onClick={handleMenu} className='text-lg  w-full ' href={'/Features'}>Features</Link></li>
-            <li><Link onClick={handleMenu} className='text-lg  w-full ' href={'/Pricing'}>Pricing</Link></li>
-            <li><Link onClick={handleMenu} className='text-lg  w-full ' href={'/Blog'}>Blog</Link></li>
-            <li className=' text-lg  w-full relative'>
-            <button onClick={()=>{setOpenPages(!openPages)}}> Pages</button>
-            <ul className={`${openPages?'block':'hidden'} absolute top-full left-0 px-4 py-5 w-full space-y-5 bg-white`}>
-              <li> <Link onClick={handleMenu} className='text-lg  w-full' href={'/About_Us'}>About Us</Link> </li>
-              <li> <Link onClick={handleMenu} className='text-lg  w-full' href={'/Services'}>Services</Link> </li>
-              <li> <Link onClick={handleMenu} className='text-lg  w-full' href={'/Integration'}>Integration</Link> </li>
-              <li> <Link onClick={handleMenu} className='text-lg  w-full' href={'/Blog/BlogDetails'}>Blog Details</Link> </li>
-              <li> <Link onClick={handleMenu} className='text-lg  w-full' href={'/Login'}>Login</Link> </li>
-              <li> <Link onClick={handleMenu} className='text-lg  w-full' href={'/Sign_Up'}>Register</Link> </li>
+    <aside className=' lg:hidden flex'>
+      <ul className={`absolute top-full right-0 w-full bg-white px-6 text-lg font-light lg:hidden flex flex-col items-start gap-x-12 pb-8 space-y-3 ${isMenuOpen?'translate-x-0':'translate-x-full'} transition-transform duration-500 ease-in-out`}>
+          <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/'}>Home</Link></li>
+          <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/Features'}>Features</Link></li>
+          <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/Pricing'}>Pricing</Link></li>
+          <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/Blog'}>Blog</Link></li>
+          <div className='w-full'><button className='w-full flex items-center justify-between' onClick={()=>{setShowPages(!showPages)}}><span>Pages</span> <span>+</span></button></div>
+            <ul className={`whitespace-nowrap space-y-2 ${showPages?'block':'hidden'}`}>
+              <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/About_Us'}>About_Us</Link></li>
+              <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/Services'}>Services</Link></li>
+              <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/Integration'}>Integration</Link></li>
+              <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/Blog/BlogDetails'}>Blog Details</Link></li>
+              <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/Login'}>Login</Link></li>
+              <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/Sign_Up'}>Register</Link></li>
             </ul>
-           </li>
-            <li><Link aria-label='learn more about our services' onClick={handleMenu} className='text-lg  w-full ' href={'/Contact_Us'}>Contact_Us</Link></li>
-
-    </ul>
-    <div><button aria-label='show-menu' onClick={()=>{setIsOpen(!isOpen)}} className='text-2xl transition-all ease-in-out duration-500'>{isOpen?<RxCross1 />:<GrMenu />}</button></div>
+          
+          <li><Link onClick={()=>{setIsMenuOpen(false)}} href={'/Contact_Us'}>Contact_Us</Link></li>
+        </ul>
+        <div ><button onClick={()=>{setIsMenuOpen(!isMenuOpen)}} className='text-2xl' > {isMenuOpen?<RxCross1 />:<CiMenuFries />} </button></div>
     </aside>
-   
   )
 }
 

@@ -10,7 +10,7 @@ import BoostSales from "@/Components/Subscribe/BoostSales";
 export default function Home() {
   return (
     
-   <main>
+   <main className="overflow-hidden">
    <Hero/>
    <Slider/>
    <BusinessUpgrade/>

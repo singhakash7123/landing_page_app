@@ -38,16 +38,16 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.className} `}
       >
-        <SmoothScroll>
+       <SmoothScroll>
           <AnimateOnScroll>
         <Header/>
-        <main>
+        <main className="overflow-hidden">
         {children}
         <Subscribe/>
         </main>   
         <Footer/>
         </AnimateOnScroll>
-        </SmoothScroll>
+      </SmoothScroll>
       </body>
     </html>
   );

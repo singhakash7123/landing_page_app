@@ -8,10 +8,10 @@ const page = () => {
         return <li key={item.id}><BlogCard  heading={item.heading} image={item.image} paragraph={item.paragraph} /></li>
     })
   return (
-    <>
-    <div className='h-20 bg-black lg:h-25'>page</div>
+    <main >
+    <div className='h-20 bg-black lg:h-24'>page</div>
     <div className='text-center h-[40vh] flex flex-col items-center justify-center'>
-        <h2 data-aos='fade-down' className='text-5xl font-bold'>Latest Insights & Updates</h2>
+        <h2 data-aos='fade-down' className='text-4xl lg:text-5xl font-bold'>Latest Insights & Updates</h2>
         <p data-aos='fade-down' className='max-w-xl mx-auto mt-4 text-gray-400'>Stay informed with our latest articles and updates, covering
 trends, tips, and insights to help you grow.</p>
     </div>
@@ -52,7 +52,7 @@ trends, tips, and insights to help you grow.</p>
            </div>
         </div>
     </div>
-    </>
+    </main>
   )
 }
 

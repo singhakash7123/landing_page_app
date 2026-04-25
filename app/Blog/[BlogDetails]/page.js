@@ -10,7 +10,7 @@ const page = async({searchParams
    const Heading = decodeURIComponent(heading)
    const Image_URL = decodeURIComponent(image)
   return (
-    <>
+    <main >
     <div className='h-20 bg-black lg:h-25'>page</div>
    
     <div className='w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-x-10 mt-8 px-6'>
@@ -22,7 +22,7 @@ const page = async({searchParams
         </div>
         <h1 data-aos='fade-right' className='text-5xl font-bold mt-6'>{Heading}</h1>
         <div className='w-full md:max-w-3xl aspect-square md:aspect-2/1 bg-red-400 mt-10 rounded-xl relative'>
-        <Image src={Image_URL} alt="post_image" fill className='object-cover' sizes='(max-width:768px)100vw 50vw'/>
+        {/* <Image src={Image_URL} alt="post_image" fill className='object-cover' sizes='(max-width:768px)100vw 50vw'/> */}
         </div>
 
         <div data-aos='fade-right' className='flex gap-x-3 mt-8'>
@@ -98,7 +98,7 @@ const page = async({searchParams
        
         
     
-    </>
+    </main>
   )
 }
 
