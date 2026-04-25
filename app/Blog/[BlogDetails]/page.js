@@ -1,7 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 import { FaQuoteLeft } from "react-icons/fa";
-const page = () => {
+import Image from 'next/image'
+const page = async({searchParams
+}) => {
+    const {heading,image} = await searchParams
+
+    console.log(heading,image);
+   const Heading = decodeURIComponent(heading)
+   const Image_URL = decodeURIComponent(image)
   return (
     <>
     <div className='h-20 bg-black lg:h-25'>page</div>
@@ -13,8 +20,10 @@ const page = () => {
             <span>Aug 01, 2025</span>
             <span>0 Comments</span>
         </div>
-        <h1 data-aos='fade-right' className='text-5xl font-bold mt-6'>The Importance of SEO in Growing Your Online Store</h1>
-        <div className='w-full md:max-w-3xl aspect-square md:aspect-2/1 bg-red-400 mt-10 rounded-xl'></div>
+        <h1 data-aos='fade-right' className='text-5xl font-bold mt-6'>{Heading}</h1>
+        <div className='w-full md:max-w-3xl aspect-square md:aspect-2/1 bg-red-400 mt-10 rounded-xl relative'>
+        <Image src={Image_URL} alt="post_image" fill className='object-cover' sizes='(max-width:768px)100vw 50vw'/>
+        </div>
 
         <div data-aos='fade-right' className='flex gap-x-3 mt-8'>
             <span className='text-5xl font-bold'>A</span>

@@ -1,8 +1,12 @@
 import BlogCard from '@/Components/Cards/BlogCard'
+import blogArray from '@/Data/Blog'
 import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
+    const renderBlogs = blogArray?.map((item)=>{
+        return <li key={item.id}><BlogCard  heading={item.heading} image={item.image} paragraph={item.paragraph} /></li>
+    })
   return (
     <>
     <div className='h-20 bg-black lg:h-25'>page</div>
@@ -13,10 +17,7 @@ trends, tips, and insights to help you grow.</p>
     </div>
     <div className='w-full sm:max-w-3xl lg:max-w-7xl mx-auto grid lg:grid-cols-[7fr_3fr] grid-cols-1 gap-x-10 px-6'>
        <ul data-aos='fade-right' className='space-y-8'>
-        <li><BlogCard/></li>
-        <li><BlogCard/></li>
-        <li><BlogCard/></li>
-        <li><BlogCard/></li>
+        {renderBlogs}
        </ul>
 
         {/* links */}
